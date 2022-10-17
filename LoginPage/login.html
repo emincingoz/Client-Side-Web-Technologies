@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log-in Page</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      width: 400px;
+      height: 340px;
+      margin: auto;
+      background-color: #e0e0e0;
+      text-align: center;
+      box-shadow: 7px 7px 5px #9c9ba9;
+      margin-top: 40px;
+    }
+
+    .btn {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      border: 2px solid;
+      font: 1em sans-serif;
+      margin: 1%;
+    }
+
+    .login {
+      font-size: larger;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .form {
+      margin: 0% 5%;
+    }
+
+    .red {
+      border-color: #f92828;
+      color: #f92828;
+    }
+
+    .blue {
+      border-color: #2121fa;
+      color: #2121fa;
+    }
+
+    .hvr_green:hover {
+      background-color: #008000;
+      border-color: white;
+      color: white;
+      cursor: pointer;
+    }
+
+    .input {
+      color: #9c9ba9;
+      width: 100%;
+      height: 40px;
+      border: 0px;
+      font: 1em sans-serif;
+      font-size: 13px;
+      padding-left: 5px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .submit_btn {
+      width: 100%;
+      height: 40px;
+      border: 0px;
+      font: 1em sans-serif;
+      margin-top: 20px;
+    }
+
+    .rad {
+      border-radius: 5px;
+    }
+
+    .clr_submit {
+      color: black;
+      background-color: #adff2f;
+      border: 2px solid black;
+    }
+
+    .clr_submit:hover {
+      border-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container rad">
+    <div class="login">
+      <h1>Login</h1>
+    </div>
+    <div>
+      <button class="btn red hvr_green" type="button">G</button>
+      <button class="btn blue hvr_green">f</button>
+      <button class="btn blue hvr_green">in</button>
+    </div>
+    <div class="form">
+      <form>
+        <br />
+        <input class="input rad" type="email" name="email" placeholder="Your email" />
+        <input class="input rad" type="text" name="password" placeholder="Password" />
+        <button class="submit_btn rad hvr_green clr_submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

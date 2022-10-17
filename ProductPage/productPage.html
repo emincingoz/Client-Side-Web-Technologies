@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Uno</title>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 75%;
+            margin: auto;
+        }
+
+        .top {
+            display: flex;
+            height: 45%;
+            margin: auto;
+            padding-top: 5%;
+        }
+
+        .image {
+            width: 100%;
+            background-color: #f4f4f4;
+            margin-right: 0.5%;
+        }
+
+        img {
+            width: 100%;
+            float: left;
+        }
+
+        .component {
+            width: 100%;
+            background-color: #f4f4f4;
+            margin-left: 0.5%;
+        }
+
+        .btnBox {
+            display: flex;
+        }
+
+        .box {
+            width: 40px;
+            height: 40px;
+            border: 1px solid blue;
+            margin: auto;
+            text-align: center;
+            justify-items: center;
+            padding-top: 3px;
+        }
+
+        button {
+            height: 40px;
+            background-color: #008000;
+            color: white;
+            font-size: 25px;
+            border: 0px;
+            padding: 0px 10px;
+        }
+
+        .button {
+            padding-left: 10px;
+        }
+
+        .blue_border {
+            border-left: 5px solid blue;
+            margin-bottom: 3%;
+        }
+
+        .green_border {
+            border-left: 5px solid green;
+            font-size: larger;
+            margin-bottom: 3%;
+        }
+
+        p {
+            padding-left: 10px;
+            padding-top: 1%;
+        }
+
+        ul {
+            margin-left: 40px;
+        }
+
+        table,
+        th,
+        td {
+            width: 100%;
+            border: 1px solid #e0e0e0;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            width: 50%;
+            height: 35px;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f9f9f9
+        }
+
+        th {
+            text-align: left;
+            background-color: #f9f9f9;
+        }
+
+        .hvrTbl:hover {
+            background-color: #909090;
+            color: white;
+        }
+
+        h3 {
+            color: #0f5da0;
+            margin-bottom: 0.5%;
+        }
+
+        .blue_ {
+            color: #41befb;
+        }
+
+        .header1 {
+            color: black;
+            margin: 2.5%;
+            margin-bottom: 5%;
+        }
+
+        .font1 {
+            font-size: 18px;
+            height: 27px;
+        }
+
+        .font2 {
+            font-size: 20px;
+            height: 30px;
+        }
+
+        .font3 {
+            color: green;
+            font-size: 24px;
+            height: 36px;
+            font-weight: bold;
+        }
+
+        .font4 {
+            font-size: 25px;
+            height: 37.5px;
+            font-weight: bold;
+        }
+
+        .font5 {
+            font-size: 35px;
+            height: 48px;
+            font-weight: bold;
+        }
+
+        .btnBox {
+            padding-left: 10px;
+        }
+
+        .three {
+            display: flex;
+            font-size: 25px;
+            font-weight: normal;
+            justify-content: center;
+        }
+
+        button:hover {
+            background-color: blue;
+            ;
+        }
+
+        .properties {
+            margin-top: 2%;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="image"><img src="arduino.jpg" alt="arduino"></div>
+            <div class="component">
+                <div>
+                    <h2 class="header1">Original Arduino Uno Mini - Limited Edition</h2>
+                </div>
+                <div class="blue_border font2">
+                    <p>Marka/Menşei: <span class="blue_">Arduino</span></p>
+                </div>
+                <div class="green_border font2">
+                    <p>Stok kodu: 20530</p>
+                </div>
+                <div class="blue_border font1">
+                    <p>765.66 TL + KDV</p>
+                </div>
+                <div class="green_border font4">
+                    <p> <span class="blue_">903,48 TL KDV Dahil</span></p>
+                </div>
+                <div class="blue_border font5 btnBox">
+                    <div class="three">
+                        <div class="box"> - </div>
+                        <div class="box"> 1 </div>
+                        <div class="box"> + </div>
+                    </div>
+                    <div class="button"><button>Sepete Ekle</button></div>
+                </div>
+                <div class="green_border font3">
+                    <p>*Alışveriş Listeme Ekle</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="middle">
+            <h3>Original Arduino Uno Mini Özellikleri</h3>
+            <hr>
+            <div class="properties">
+                <ul>
+                    <li>6 adet PWM çıkışı sağlayan 14 dijital I/O pini</li>
+                    <li>6 analog giriş pini</li>
+                    <li>16MHZ seramik rezonatör</li>
+                    <li>USB-C bağlantı noktası</li>
+                    <li>USB veya harici bir güç kaynağı ile çalışır</li>
+                    <li>Yeniden başlatma tuşu</li>
+                    <li>Anahtar bileşenler</li>
+                    <li>Mikroçip Teknolojisi ATmega328 MCU</li>
+                    <li>USB Denetleyici Mikroçip Teknolojisi ATmega16U2 MCU</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <div class="bottom">
+            <h3>Teknik Özellikler</h3>
+            <hr>
+            <table class="properties">
+                <tr>
+                    <th>Üretici Firma</th>
+                    <th>Arduino</th>
+                </tr>
+                <tr class="hvrTbl">
+                    <td>SRAM</td>
+                    <td>2KB</td>
+                </tr>
+                <tr class="hvrTbl">
+                    <td>Ürün Boyutları</td>
+                    <td>10.9 x 9.09 x 5 cm</td>
+                </tr>
+                <tr class="hvrTbl">
+                    <td>Ürün Ağırlığı</td>
+                    <td> 73.6 g</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

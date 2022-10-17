@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cards</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      width: 75%;
+      height: 450px;
+      margin: auto;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+
+    .card {
+      width: 45%;
+      height: 290px;
+      background-color: white;
+      margin: 3%;
+      box-shadow: 7px 7px 5px #9c9ba9;
+      position: relative;
+    }
+
+    .recipes {
+      font-size: larger;
+      padding-top: 50px;
+      padding-bottom: 0;
+    }
+
+    .cards {
+      display: flex;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 5px 5px 0px 0px;
+      height: 230px;
+    }
+
+    .rad {
+      border-radius: 5px;
+    }
+
+    .info {
+      padding-left: 17px;
+      padding-top: 10px;
+      text-align: left;
+      width: 85%;
+    }
+
+    .name {
+      opacity: 65%;
+    }
+
+    .owner {
+      opacity: 43%;
+    }
+
+    .details {
+      display: flex;
+    }
+
+    .dtlButton {
+      width: 15%;
+      margin: auto;
+      margin-right: 1em;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    .icon {
+      position: absolute;
+      padding: 5px;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top: 15px;
+      background-color: #f0f0f0;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .btn {
+      width: 50px;
+      height: 28px;
+      border: 2px solid;
+      border-color: #908eff;
+      color: #908eff;
+      background-color: #eff1fa;
+    }
+
+    .hvr:hover {
+      background-color: #008000;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .material-icons {
+      font-size: 18px;
+      padding-right: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="recipes">
+      <h1>Recipes</h1>
+    </div>
+    <div class="cards">
+      <div class="card rad">
+        <div class="icon">
+          <i class="material-icons">access_time</i>
+          <p>25 MINS</p>
+        </div>
+        <div class="image">
+          <img src="stew.jpg" alt="stew" />
+        </div>
+        <div class="details">
+          <div class="info">
+            <h3 class="name">5 Bean Chill Stew</h3>
+            <h5 class="owner">Recipe by Mehmet</h5>
+          </div>
+          <div class="dtlButton">
+            <button class="btn rad hvr" type="button">Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="card rad">
+        <div class="icon">
+          <i class="material-icons">access_time</i>
+          <p>40 MINS</p>
+        </div>
+        <div class="image"><img src="curry.jpg" alt="curry" /></div>
+        <div class="details">
+          <div class="info">
+            <h3 class="name">Tofu Curry</h3>
+            <h5 class="owner">Recipe by Ayse</h5>
+          </div>
+          <div class="dtlButton">
+            <button class="btn rad hvr" type="button">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
