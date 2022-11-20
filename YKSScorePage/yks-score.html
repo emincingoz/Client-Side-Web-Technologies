@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YKS Score Page</title>
+
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        /*text-align: center;*/
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        /*align-items: center;*/
+      }
+
+      .left-container,
+      .right-container {
+        width: 45%;
+        background-color: aliceblue;
+        margin: 0.5%;
+        border-radius: 3px;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+
+      .left-container-body,
+      .right-container-body {
+        background-color: white;
+        border-radius: 5px;
+      }
+
+      .ayt-field-section-title {
+        font-weight: bold;
+        color: gray;
+      }
+
+      .question-count-style {
+        font-size: 13px;
+        color: blue;
+      }
+
+      .question-container {
+        width: 70px;
+        height: 35px;
+        border: 1px solid gray;
+        border-bottom: 3px solid gray;
+        border-radius: 9px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .section-box {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .section-box > div {
+        color: midnightblue;
+        font-weight: bold;
+      }
+
+      .true-false-section {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 5%;
+      }
+
+      .question-container-icon-tick {
+        margin: -30% 77%;
+        color: green;
+      }
+
+      .question-container-icon-mul {
+        margin: -30% 77%;
+        color: red;
+      }
+
+      .question-container-with-icon {
+        margin: 0 3%;
+      }
+
+      .net-container {
+        border: none;
+      }
+
+      #fieldsection {
+        width: 100%;
+      }
+
+      .ayt-field-section {
+        margin: 5% 0;
+      }
+
+      @media screen and (max-width: 991px) {
+        .top-text {
+          /*padding: 7px;*/
+          padding-bottom: 2%;
+          font-size: 20px;
+          text-align: center;
+        }
+
+        .left-container-body,
+        .right-container-body {
+          margin: 1%;
+          padding: 2%;
+        }
+
+        .ayt-field-section-title {
+          font-size: smaller;
+        }
+
+        .section-box {
+          margin: 1%;
+        }
+      }
+
+      @media screen and (min-width: 992px) {
+        .top-text {
+          /*padding: 15px;*/
+          font-size: 25px;
+          padding-bottom: 2%;
+          text-align: center;
+        }
+
+        .left-container-body,
+        .right-container-body {
+          margin: 2%;
+          padding: 2%;
+        }
+
+        .ayt-field-section-title {
+          font-size: medium;
+        }
+
+        .section-box {
+          margin: 1%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="left-container">
+        <div class="left-container-body">
+          <div class="top-text">
+            <p><span class="bold">AYT</span> Puanı Hesaplama</p>
+          </div>
+          <div id="fieldsection"></div>
+        </div>
+      </div>
+
+      <div class="right-container">
+        <div class="right-container-body">
+          <div class="top-text">
+            <p><span class="bold">TYT</span> Puanı Hesaplama</p>
+          </div>
+          <div id="tytfieldsection"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      let aytItems = [
+        {
+          id: 1,
+          sectionTitle: "Türk Dili ve Edebiyatı ve Sosyal Bilimler-1 Testi",
+          sectionItems: [
+            { title: "Türk Dili ve Edebiyatı", questionCount: 24 },
+            { title: "Tarih-1", questionCount: 10 },
+            { title: "Coğrafya-1", questionCount: 6 },
+          ],
+        },
+        {
+          id: 2,
+          sectionTitle: "Sosyal Bilimler-2 Testi",
+          sectionItems: [
+            { title: "Tarih-2", questionCount: 11 },
+            { title: "Coğrafya-2", questionCount: 11 },
+            { title: "Felsefe Grubu", questionCount: 12 },
+            {
+              title: "Din Kültürü ve Ahlak Bilgisi / Ek Felsefe Grubu",
+              questionCount: 6,
+            },
+          ],
+        },
+        {
+          id: 3,
+          sectionTitle: "Matematik Testi",
+          sectionItems: [{ title: "Matematik", questionCount: 40 }],
+        },
+        {
+          id: 4,
+          sectionTitle: "Fizik Bilimleri Testi",
+          sectionItems: [
+            { title: "Fizik", questionCount: 14 },
+            { title: "Kimya", questionCount: 13 },
+            { title: "Biyoloji", questionCount: 13 },
+          ],
+        },
+      ];
+
+      let tytItems = [
+        { id: 1, title: "Türkçe", questionCount: 40 },
+        {
+          id: 2,
+          title: "Sosyal Bilimler",
+          questionCount: 20,
+        },
+        {
+          id: 3,
+          title: "Temel Matematik",
+          questionCount: 40,
+        },
+        {
+          id: 4,
+          title: "Fen Bilimleri",
+          questionCount: 20,
+        },
+      ];
+
+      function renderAytItems() {
+        let template = "";
+        for (let index = 0; index < aytItems.length; index++) {
+          let item = aytItems[index];
+
+          template += `<div class="ayt-field-section">
+              <p class="ayt-field-section-title">
+                ${item.sectionTitle}
+              </p>`;
+          console.log(item);
+          item.sectionItems.forEach((i) => {
+            template += `<div class="section-box">
+                <div>
+                  ${i.title}
+                  <p class="question-count-style">${i.questionCount} Soru</p>
+                </div>
+                <div class="true-false-section">
+                  <div class="question-container-with-icon">
+                    <div>
+                      <input
+                        class="question-container"
+                        type="text"
+                        placeholder="-"
+                      />
+                    </div>
+                    <div class="question-container-icon-tick">
+                      <span>&#10004;</span>
+                    </div>
+                  </div>
+                  <div class="question-container-with-icon">
+                    <div>
+                      <div>
+                        <input
+                          class="question-container"
+                          type="text"
+                          placeholder="-"
+                        />
+                      </div>
+                    </div>
+                    <div class="question-container-icon-mul">
+                      <span>&#10006;</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="question-container net-container">-</div>
+              </div>
+              <hr />`;
+          });
+
+          template += `</div>`;
+        }
+
+        document.querySelector("#fieldsection").innerHTML = template;
+      } // end-renderItems
+
+      function renderTytItems() {
+        let template = "";
+        for (let index = 0; index < tytItems.length; index++) {
+          let item = tytItems[index];
+
+          template += `<div class="section-box">
+                <div>
+                  ${item.title}
+                  <p class="question-count-style">${item.questionCount} Soru</p>
+                </div>
+                <div class="true-false-section">
+                  <div class="question-container-with-icon">
+                    <div>
+                      <input
+                        class="question-container"
+                        type="text"
+                        placeholder="-"
+                      />
+                    </div>
+                    <div class="question-container-icon-tick">
+                      <span>&#10004;</span>
+                    </div>
+                  </div>
+                  <div class="question-container-with-icon">
+                    <div>
+                      <div>
+                        <input
+                          class="question-container"
+                          type="text"
+                          placeholder="-"
+                        />
+                      </div>
+                    </div>
+                    <div class="question-container-icon-mul">
+                      <span>&#10006;</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="question-container net-container">-</div>
+              </div>
+              <hr />`;
+
+          template += `</div>`;
+        }
+
+        document.querySelector("#tytfieldsection").innerHTML = template;
+      } // end-renderItems
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initial rendering of the items
+        renderAytItems();
+        renderTytItems();
+      }); // end-document.addEventListener
+    </script>
+  </body>
+</html>
