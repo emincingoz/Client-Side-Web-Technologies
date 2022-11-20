@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+
+      header {
+        height: 630px;
+        background: linear-gradient(rgb(40, 42, 53, 0.9), rgb(40, 42, 53, 0.9)),
+          url("img/bg-img.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #272935;
+        background-position: 50%;
+        display: flex;
+      }
+
+      .main_header {
+        margin: auto;
+        justify-items: center;
+        align-items: center;
+      }
+
+      .header1,
+      .header2,
+      .prgf,
+      .green,
+      .paragraph,
+      .header,
+      .item_text,
+      .card_h2,
+      .card_prg,
+      .subitem {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .header1 {
+        font-size: 3em;
+      }
+
+      .header2 {
+        font-size: 1.7em;
+      }
+
+      .prgf {
+        font-size: 1.09em;
+      }
+
+      .btn {
+        font-size: 1.1em;
+      }
+
+      button {
+        background-color: #0ca66d;
+        margin-top: 10px;
+        border-radius: 1.4em;
+        width: 14em;
+        height: 2.7em;
+      }
+
+      .clrwhite {
+        color: white;
+      }
+
+      .header {
+        padding: 3% 0%;
+        font-size: 2.4em;
+      }
+
+      .container_first_main {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+      }
+
+      .first_main_item {
+        padding: 2%;
+      }
+
+      .container_second_main {
+        background-color: #272935;
+        display: grid;
+        color: white;
+      }
+
+      .iconText {
+        display: grid;
+        grid-template-columns: repeat(28, 1fr);
+        grid-template-rows: repeat(8, auto);
+      }
+
+      .icon > img {
+        width: 110%;
+      }
+
+      .icon_small > img {
+        width: 70%;
+      }
+
+      .icon_smaller > img {
+        width: 55%;
+      }
+
+      .curve > img {
+        width: 200%;
+        align-self: flex-start;
+      }
+
+      .item_text {
+        font-size: 1em;
+        /*top, right, bottom, left*/
+        padding: 7% 0% 25% 0%;
+      }
+
+      .container_third_main {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 2%;
+        background-color: #eeeeee;
+        padding: 2% 2%;
+      }
+
+      .card_free,
+      .card_basic,
+      .card_pro,
+      .card_premium {
+        background-color: white;
+        padding: 10% 2%;
+        border-radius: 1.5%;
+      }
+
+      .card_h2,
+      .subitem,
+      .card_prg {
+        text-align: start;
+      }
+
+      .card_h2,
+      .card_prg {
+        padding: 2%;
+      }
+
+      .card_header {
+        padding-left: 5%;
+      }
+
+      .card_subitem {
+        padding: 0% 10%;
+      }
+
+      .check {
+        border-radius: 50%;
+        background-color: #e3f0e8;
+        margin-right: 3%;
+      }
+
+      .ftr {
+        justify-content: center;
+        padding: 2%;
+      }
+      .bigger {
+        font-size: 1em;
+        opacity: 50%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+      }
+      .smaller {
+        font-size: 00.9em;
+        opacity: 80%;
+      }
+
+      .item:nth-child(1) {
+        grid-column: 1 / 7;
+        grid-row: 1 / 4;
+        justify-self: end;
+        padding-right: 9%;
+      }
+
+      .item:nth-child(2) {
+        /*grid-area: curve1;*/
+        grid-column: 7 / 9;
+        grid-row: 1 / 4;
+        justify-self: center;
+        align-self: center;
+      }
+
+      .item:nth-child(3) {
+        /*grid-area: icon2;*/
+        grid-column: 11 / 13;
+        grid-row: 1 / 4;
+      }
+
+      .item:nth-child(4) {
+        /* grid-area: curve2;*/
+        grid-column: 13 / 15;
+        grid-row: 1 / 4;
+        justify-self: center;
+        align-self: center;
+      }
+
+      .item:nth-child(5) {
+        /*grid-area: icon3;*/
+        grid-column: 17 / 19;
+        grid-row: 1 / 4;
+      }
+
+      .item:nth-child(6) {
+        /* grid-area: curve3; */
+        grid-column: 19 / 21;
+        grid-row: 1 / 4;
+        justify-self: center;
+        align-self: center;
+      }
+
+      .item:nth-child(7) {
+        /* grid-area: icon4; */
+        grid-column: 23 / 28;
+        grid-row: 1 / 4;
+        justify-self: start;
+        padding-left: 5%;
+      }
+
+      .item:nth-child(8) {
+        /* grid-area: text1; */
+        grid-column: 1 / 7;
+        grid-row: 5 / 8;
+      }
+
+      .item:nth-child(9) {
+        /* grid-area: text2; */
+        grid-column: 8 / 14;
+        grid-row: 5 / 8;
+      }
+
+      .item:nth-child(10) {
+        /* grid-area: text3; */
+        grid-column: 15 / 21;
+        grid-row: 5 / 8;
+      }
+
+      .item:nth-child(11) {
+        /* grid-area: text4; */
+        grid-column: 21 / 28;
+        grid-row: 5 / 8;
+        justify-self: end;
+      }
+
+      .green {
+        /*top, right, bottom, left*/
+        padding: 4% 0% 3%;
+        color: #0ca66d;
+        font-size: 1.2em;
+      }
+
+      .paragraph {
+        font-size: 0.9em;
+        padding: 0% 0% 8%;
+      }
+
+      @media screen and (max-width: 992px) and (min-width: 768px) {
+        .container_first_main {
+          grid-template-columns: repeat(2, auto);
+        }
+        .header1 {
+          font-size: 2.5em;
+        }
+
+        .header2 {
+          font-size: 1.4em;
+        }
+
+        .prgf {
+          font-size: 0.9em;
+        }
+
+        .btn {
+          font-size: 0.9em;
+        }
+        .green {
+          /*top, right, bottom, left*/
+          padding: 4% 0% 3%;
+          font-size: 1em;
+        }
+
+        .paragraph {
+          font-size: 0.7em;
+          padding: 0% 0% 3%;
+        }
+
+        .header {
+          padding: 7% 0%;
+          font-size: 2em;
+        }
+
+        .icon > img {
+          width: 70%;
+        }
+
+        .icon_small > img {
+          width: 11%;
+        }
+
+        .icon_smaller > img {
+          width: 8%;
+        }
+
+        .curve > img {
+          width: 200%;
+          align-self: flex-start;
+        }
+
+        .item_text {
+          font-size: 0.85em;
+          /*top, right, bottom, left*/
+          padding: 5% 0% 10% 0%;
+        }
+
+        .item:nth-child(1) {
+          grid-column: 6 / 11;
+          grid-row: 1/2;
+          justify-self: center;
+          padding-right: 0%;
+        }
+
+        .item:nth-child(2),
+        .item:nth-child(4),
+        .item:nth-child(6) {
+          display: none;
+        }
+
+        .item:nth-child(3) {
+          /*grid-area: icon2;*/
+          grid-column: 15 / 28;
+          grid-row: 1/2;
+        }
+
+        .item:nth-child(8) {
+          /* grid-area: text1; */
+          grid-column: 3 / 14;
+          grid-row: 3/4;
+        }
+
+        .item:nth-child(9) {
+          /* grid-area: text2; */
+          grid-column: 15 / 28;
+          grid-row: 3/4;
+        }
+
+        .item:nth-child(5) {
+          /*grid-area: icon3;*/
+          grid-column: 1 / 16;
+          grid-row: 5/6;
+        }
+
+        .item:nth-child(7) {
+          /* grid-area: icon4; */
+          grid-column: 15 / 28;
+          grid-row: 5/6;
+          justify-self: center;
+          padding-left: 0%;
+        }
+
+        .item:nth-child(10) {
+          /* grid-area: text3; */
+          grid-column: 3 / 14;
+          grid-row: 7/8;
+        }
+
+        .item:nth-child(11) {
+          /* grid-area: text4; */
+          grid-column: 15 / 28;
+          grid-row: 7/8;
+          justify-self: center;
+        }
+
+        .container_third_main {
+          grid-template-columns: repeat(2, auto);
+        }
+
+        .card {
+          padding-top: 5%;
+        }
+
+        .card_h2,
+        .card_prg {
+          padding: 1%;
+        }
+        .card_prg,
+        .subitem {
+          font-size: 0.85em;
+        }
+
+        h1 {
+          font-size: 1.5em;
+        }
+
+        .ftr {
+          padding: 3%;
+        }
+        .bigger {
+          font-size: 0.8em;
+          padding-top: 2%;
+          padding-bottom: 1.5%;
+        }
+        .smaller {
+          font-size: 00.65em;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .container_first_main {
+          grid-template-columns: repeat(1, auto);
+        }
+
+        .iconText {
+          grid-template-rows: repeat(4, auto);
+          gap: 2px;
+        }
+
+        .header1 {
+          font-size: 2em;
+        }
+
+        .header2 {
+          font-size: 1.18em;
+        }
+
+        .prgf {
+          font-size: 0.68em;
+        }
+
+        .btn {
+          font-size: 0.7em;
+        }
+        button {
+          margin-top: 15px;
+          border-radius: 2em;
+          width: 32em;
+          height: 3.5em;
+        }
+        .green {
+          /*top, right, bottom, left*/
+          padding: 1% 0% 1.5%;
+          font-size: 0.87em;
+        }
+
+        .paragraph {
+          font-size: 0.67em;
+          padding: 0%;
+        }
+
+        .header {
+          padding: 5% 0%;
+          font-size: 1.7em;
+        }
+
+        .icon > img {
+          width: 60%;
+        }
+
+        .icon_small > img {
+          width: 6.5%;
+        }
+
+        .icon_smaller > img {
+          width: 5%;
+        }
+
+        .curve > img {
+          width: 200%;
+          align-self: flex-start;
+        }
+
+        .item_text {
+          font-size: 0.7em;
+          /*top, right, bottom, left*/
+          padding: 1% 0% 5% 0%;
+        }
+
+        .item:nth-child(1) {
+          grid-column: 1/28;
+          grid-row: 1;
+          justify-self: center;
+          padding-right: 0%;
+        }
+
+        .item:nth-child(2),
+        .item:nth-child(4),
+        .item:nth-child(6) {
+          display: none;
+        }
+
+        .item:nth-child(3) {
+          /*grid-area: icon2;*/
+          grid-column: 1/28;
+          grid-row: 3;
+        }
+
+        .item:nth-child(8) {
+          /* grid-area: text1; */
+          grid-column: 1/28;
+          grid-row: 2;
+        }
+
+        .item:nth-child(9) {
+          /* grid-area: text2; */
+          grid-column: 1/28;
+          grid-row: 4;
+        }
+
+        .item:nth-child(5) {
+          /*grid-area: icon3;*/
+          grid-column: 1/28;
+          grid-row: 5;
+        }
+
+        .item:nth-child(7) {
+          /* grid-area: icon4; */
+          grid-column: 1/28;
+          grid-row: 7;
+          justify-self: center;
+          padding-left: 0%;
+        }
+
+        .item:nth-child(10) {
+          /* grid-area: text3; */
+          grid-column: 1/28;
+          grid-row: 6;
+        }
+
+        .item:nth-child(11) {
+          /* grid-area: text4; */
+          grid-column: 1/28;
+          grid-row: 8;
+          justify-self: center;
+        }
+
+        .container_third_main {
+          grid-template-columns: repeat(1, auto);
+        }
+
+        .card {
+          padding: 1.5%;
+          padding-left: 0%;
+        }
+
+        .card_h2,
+        .card_prg {
+          padding: 0%;
+        }
+        .card_prg,
+        .subitem {
+          font-size: 0.7em;
+        }
+
+        h1 {
+          font-size: 1.1em;
+        }
+        .check {
+          margin-right: 1%;
+        }
+        .card_subitem {
+          padding: 0% 3.5%;
+        }
+
+        .card_header {
+          padding-left: 2%;
+        }
+
+        .ftr {
+          padding: 8%;
+        }
+        .bigger {
+          font-size: 0.5em;
+          padding-top: 2%;
+          padding-bottom: 2%;
+        }
+        .smaller {
+          font-size: 00.4em;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="main_header">
+        <h1 class="header1 clrwhite">Create a Free Website</h1>
+        <br />
+        <h3 class="header2 clrwhite">
+          Everything you need right in the browser.
+        </h3>
+        <br />
+        <p class="prgf clrwhite">
+          Build your own website. It is easy to use - try it!
+        </p>
+        <br />
+        <button class="btn clrwhite">Get started for free</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="container_first_main">
+        <div class="first_main_item">
+          <h3 class="green">Website</h3>
+          <p class="paragraph">
+            Create your own website and share it with others
+          </p>
+        </div>
+        <div class="first_main_item">
+          <h3 class="green">Code Editor</h3>
+          <p class="paragraph">Code directly in your browser</p>
+        </div>
+        <div class="first_main_item">
+          <h3 class="green">File Manager</h3>
+          <p class="paragraph">
+            Start with ready-to-use designs and structures
+          </p>
+        </div>
+        <div class="first_main_item">
+          <h3 class="green">Playground</h3>
+          <p class="paragraph">Upload and handle files in your browser</p>
+        </div>
+        <div class="first_main_item">
+          <h3 class="green">Website</h3>
+          <p class="paragraph">Learn, test, and go live with your space</p>
+        </div>
+        <div class="first_main_item">
+          <h3 class="green">Website</h3>
+          <p class="paragraph">Playground for HTML, CSS and JavaScript</p>
+        </div>
+      </div>
+    </main>
+
+    <main>
+      <div class="container_second_main">
+        <h1 class="header white">How it works</h1>
+        <div class="iconText">
+          <!-- <div class="itemIcon"> -->
+          <div class="item icon"><img src="img/img1.svg" alt="icon" /></div>
+          <div class="item curve"><img src="img/img2.svg" alt="icon" /></div>
+          <div class="item icon icon_small">
+            <img src="img/img3.svg" alt="icon" />
+          </div>
+          <div class="item curve"><img src="img/img4.svg" alt="icon" /></div>
+          <div class="item icon icon_smaller">
+            <img src="img/img5.svg" alt="icon" />
+          </div>
+          <div class="item curve"><img src="img/img2.svg" alt="icon" /></div>
+          <div class="item icon"><img src="img/img6.svg" alt="icon" /></div>
+          <!-- </div>
+                <div class="itemText"> -->
+          <div class="item item_text">1. Join and create a space</div>
+          <div class="item item_text">
+            2. Choose a template - or start from scratch
+          </div>
+          <div class="item item_text">
+            3. Edit code directly in your browser
+          </div>
+          <div class="item item_text">4. Share yor website with the world</div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </main>
+
+    <main>
+      <div class="container_third_main">
+        <div class="card card_free">
+          <div class="card_header">
+            <h1 class="card_h2">
+              $0.00/<span style="font-size: 0.5em; font-style: normal"
+                >month</span
+              >
+            </h1>
+            <h1 class="card_h2">Free</h1>
+            <p class="card_prg">
+              For new web developers ready to create their first site.
+            </p>
+          </div>
+          <div class="card_subitem">
+            <p class="subitem">
+              <i class="bi bi-check check"></i>Browse with ads
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>Build static sites
+            </p>
+            <p class="subitem"><i class="bi bi-check check"></i>1 space</p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>100 MB storage
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>75 MB data/month
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>500 requests/month
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>myhost.com subdomain
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>SSL certificate
+            </p>
+          </div>
+        </div>
+        <div class="card card_basic">
+          <div class="card_header">
+            <h1 class="card_h2">
+              $4.99/<span style="font-size: 0.5em; font-style: normal"
+                >month</span
+              >
+            </h1>
+            <h1 class="card_h2">Basic</h1>
+            <p class="card_prg">
+              For those running one space with more traffic.
+            </p>
+          </div>
+          <div class="card_subitem">
+            <p class="subitem">
+              <i class="bi bi-check check"></i>Browse without ads
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>Build static sites
+            </p>
+            <p class="subitem"><i class="bi bi-check check"></i>1 space</p>
+            <p class="subitem"><i class="bi bi-check check"></i>1 GB storage</p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>10 GB data/month
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>10 000 requests/month
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>myhost.com subdomain
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>SSL certificate
+            </p>
+          </div>
+        </div>
+        <div class="card card_pro">
+          <div class="card_header">
+            <h1 class="card_h2">
+              $8.99/<span style="font-size: 0.5em; font-style: normal"
+                >month</span
+              >
+            </h1>
+            <h1 class="card_h2">Pro</h1>
+            <p class="card_prg">
+              For those running multiple spaces with more traffic.
+            </p>
+          </div>
+          <div class="card_subitem">
+            <p class="subitem">
+              <i class="bi bi-check check"></i>Browse without ads
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>Build static sites
+            </p>
+            <p class="subitem"><i class="bi bi-check check"></i>10 space</p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>10 GB storage
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>100 GB data/month
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>10 000 requests/month
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>myhost.com subdomain
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>SSL certificate
+            </p>
+          </div>
+        </div>
+        <div class="card card_premium">
+          <div class="card_header">
+            <h1 class="card_h2">
+              $12.99/<span style="font-size: 0.5em; font-style: normal"
+                >month</span
+              >
+            </h1>
+            <h1 class="card_h2">Premium</h1>
+            <p class="card_prg">
+              Build more sites and grow your online presence.
+            </p>
+          </div>
+          <div class="card_subitem">
+            <p class="subitem">
+              <i class="bi bi-check check"></i>Browse without ads
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>Build static sites
+            </p>
+            <p class="subitem"><i class="bi bi-check check"></i>50 space</p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>50 GB storage
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>500 GB data/month
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>500 000 requests/month
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>myhost.com subdomain
+            </p>
+            <p class="subitem">
+              <i class="bi bi-check check"></i>SSL certificate
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="ftr">
+        <p class="bigger">
+          2000 - 2022 MyHosting. All rights reserved. Cookie policy. Privacy and
+          Terms
+        </p>
+        <p class="smaller">
+          Reporting abusive content help us keep Spaces safe. Help us by
+          Reporting Abuse if you find any
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

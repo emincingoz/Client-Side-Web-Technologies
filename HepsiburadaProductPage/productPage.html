@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-
+    xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Hepsiburada</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        /*text-align: center;*/
+        padding: 5px;
+      }
+
+      .body,
+      .right-top,
+      .right-top-top,
+      .right-top-mid-1-div-1,
+      .right-middle-bottom,
+      .right-bottom-top-box,
+      .konum-box,
+      .right-bottom-middle,
+      .right-bottom-bottom-box {
+        display: inline-flex;
+        flex-wrap: wrap;
+        /*justify-content: center;*/
+        background-color: #f5f5f5;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .headphone {
+        width: 100%;
+        padding: 0%;
+      }
+
+      .right-bottom-bottom-box-mid-text,
+      .right-bottom-bottom-box-bottom-button {
+        align-self: center;
+      }
+
+      .right-bottom-bottom-box {
+        height: 100px;
+        background-color: white;
+        border: 1px solid #c9c5c5;
+        border-radius: 10px;
+        justify-content: space-between;
+      }
+
+      .right-bottom-bottom-box-button {
+        width: 130px;
+        height: 40px;
+        background-color: tomato;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        text-align: center;
+      }
+
+      .right-bottom-middle {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .right-bottom-middle > h3 {
+        width: 90%;
+      }
+
+      .right-bottom-mid-box-q {
+        width: 25px;
+        height: 25px;
+        border: none;
+        border-radius: 50%;
+        background-color: grey;
+        font-weight: bold;
+        color: black;
+        font-size: 21px;
+      }
+
+      .right-bottom-top-box-texts {
+        width: 70%;
+      }
+
+      .right-bottom-top-box-texts > h3 {
+        margin-bottom: 15px;
+      }
+
+      .konum-box {
+        border: none;
+        border-radius: 10px;
+        color: #e57143;
+        display: flex;
+        width: 100%;
+        margin-top: 7px;
+        margin-bottom: 20px;
+        height: 30%;
+        text-align: center;
+        align-content: center;
+        background-color: #ffefe5;
+        font-weight: bold;
+        font-size: 0.8em;
+      }
+
+      .right-bottom-top-box,
+      .right-middel-mid-box,
+      .right-bottom-bottom-box {
+        width: 95%;
+      }
+
+      .right-bottom-top-box {
+        height: 120px;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+      }
+
+      .right-top-mid-1-div-1 {
+        margin: 0;
+        padding: 0;
+      }
+
+      .right-top-top {
+        width: 50%;
+        font-size: 1.25em;
+        justify-content: flex-start;
+      }
+
+      .right-top-top,
+      .right-top-top-h3 {
+        align-self: flex-end;
+      }
+
+      .right-top-mid-1,
+      .header-h3 {
+        align-self: flex-start;
+        width: 50%;
+      }
+      .header-h3 {
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        border: none;
+      }
+
+      .header-p,
+      .header-h3 {
+        margin: 0;
+        padding: 0;
+      }
+      .header-p {
+        font-weight: bold;
+        color: #5a7cb5;
+      }
+
+      .right-middle-counter {
+        display: flex;
+      }
+
+      .right-midd-counter-boxes {
+        display: flex;
+        width: 100px;
+        border: 1px solid black;
+        border-radius: 5px;
+        justify-content: space-evenly;
+        padding: 1px;
+        align-items: center;
+        background-color: #bfbfbf;
+      }
+
+      .right-midd-counter-box {
+        width: 50%;
+        height: 98%;
+        text-align: center;
+        background-color: white;
+        border: none;
+      }
+
+      .right-mid-button {
+        width: 150px;
+        height: 60px;
+        border-radius: 5px;
+        border: none;
+        background-color: #ff6100;
+        color: aliceblue;
+        font-size: 1em;
+        font-weight: bold;
+      }
+
+      .right-middel-mid-box {
+        background-color: #efeafe;
+        height: 75px;
+        border: 3px solid #cec4e5;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .right-middle-mid-box-q {
+        width: 25px;
+        height: 25px;
+        border: none;
+        border-radius: 50%;
+        background-color: white;
+        font-weight: bold;
+        color: #666666;
+        font-size: 21px;
+      }
+
+      .icon {
+        display: flex;
+      }
+
+      .right-top-mid-1-right {
+        font-size: 0.85em;
+        font-weight: bold;
+        padding-left: 15%;
+      }
+      .full-star {
+        color: #f6a911;
+      }
+      .empty-star {
+        color: #bfbfbf;
+      }
+
+      .right-top-mid-3-inside {
+        overflow: hidden;
+        white-space: nowrap;
+        /*text-overflow: ellipsis;*/
+      }
+
+      .color-blue {
+        color: #5a7cb5;
+        font-weight: bold;
+      }
+      .torima {
+        font-size: 0.8em;
+      }
+      .torima-bold {
+        font-weight: bold;
+      }
+
+      .right-top-mid-3-inside-toolong {
+        width: 10%;
+        padding: 10% 0%;
+        /* overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;*/
+      }
+      .puan {
+        background-color: #40ad40;
+        color: white;
+        font-size: 0.8em;
+        border-radius: 13%;
+        padding: 0.8% 2%;
+      }
+      .quMark {
+        background-color: #cfcbc7;
+        font-size: 0.7em;
+        font-weight: bold;
+        border-radius: 50%;
+        margin: 1%;
+        padding: 0.8%;
+      }
+      .kmp {
+        font-weight: bold;
+      }
+      .num {
+        background-color: #ff6100;
+        color: white;
+        border-radius: 50%;
+        font-size: 0.8em;
+        padding: 0.6% 1.2%;
+      }
+      .right-top-bottom {
+        font-size: 0.9em;
+        font-weight: bold;
+        color: #3fad3f;
+      }
+      hr {
+        border-left: hidden;
+        border-bottom: hidden;
+      }
+      .minus,
+      .plus,
+      .one {
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+      .right-middle-mid-box-faydalan {
+        background-color: white;
+        border-radius: 13%;
+        padding: 1.5% 2%;
+        border: 2px solid #cec4e5;
+      }
+      .right-bottom-top-box-images {
+        padding-left: 9.1%;
+      }
+      h5 {
+        font-size: 0.9em;
+      }
+      .subtitle {
+        font-size: 0.7em;
+      }
+      .color {
+        color: #ff6100;
+      }
+      .right-bottom-mid-box-q {
+        background-color: #cfcbc7;
+        font-size: 1em;
+        align-self: center;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .desc-properties {
+        font-size: 0.8em;
+      }
+      .left {
+        background-color: white;
+      }
+      .properties {
+        display: flex;
+      }
+      .table-left {
+        padding-left: 5%;
+      }
+      .table-right {
+        padding-left: 15%;
+      }
+      .right-top-mid-2-bold {
+        font-weight: bold;
+      }
+
+      @media screen and (min-width: 993px) {
+        .header-p,
+        .header-h3 {
+          text-align: start;
+        }
+
+        .left,
+        .right {
+          width: 50%;
+        }
+
+        .right-top-mid-2 {
+          align-self: flex-start;
+          font-size: 0.9em;
+        }
+
+        .right-top-mid-3 {
+          width: 100%;
+        }
+
+        .right-top-mid-3-inside {
+          width: 60%;
+          height: 100%;
+          background-color: white;
+          border: 1px solid;
+          border-radius: 2px;
+          border-color: grey;
+          font-size: 0.8em;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        .body {
+          background-color: #f5f5f5;
+          width: 100%;
+        }
+        .left,
+        .right {
+          width: 100%;
+        }
+        .desc-properties {
+          font-size: 0.9em;
+        }
+        .header-p,
+        .header-h3,
+        .right-top-bottom {
+          display: none;
+        }
+        .right-top {
+          padding: 0%;
+        }
+        .right-top-top {
+          font-size: 0.9em;
+          padding: 1% 10%;
+        }
+        .right-top-top-h3 {
+          align-self: center;
+        }
+        .right-top-mid-1-div-1 {
+          font-size: 0.9em;
+          padding: 1% 10%;
+        }
+        .right-top-mid-1-right {
+          font-size: 0.7em;
+          padding: 0% 23%;
+        }
+        .right-top-mid-2 {
+          padding-top: 0%;
+          padding-left: 30%;
+          font-size: 0.8em;
+        }
+        .right-top-mid-3 {
+          width: 40%;
+          height: 10%;
+          background-color: white;
+          border: 1px solid;
+          border-radius: 2px;
+          border-color: grey;
+          font-size: 0.7em;
+          margin: 3% 0% 5% 20%;
+        }
+        .right-top-mid-3-inside {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .right-middle-counter {
+          justify-content: center;
+        }
+        .right-middle-bottom {
+          padding-left: 8%;
+        }
+        .right-bottom-bottom-box {
+          background-color: #f5f5f5;
+        }
+        .right-midd-counter-boxes {
+          width: 150px;
+        }
+      }
+      .right-mid-button-box {
+        padding: 0% 2%;
+      }
+      .right-midd-counter-boxes {
+        width: 150px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="body">
+      <div class="left">
+        <div class="headphone">
+          <img class="headphone" src="img/kulaklik.jfif" alt="" />
+          <hr />
+        </div>
+
+        <div class="properties">
+          <table class="table-left">
+            <tr>
+              <td class="desc-properties bold">Çift Telefon Desteği</td>
+              <td class="desc-properties">Yok</td>
+            </tr>
+            <tr>
+              <td class="desc-properties dp-left bold">
+                Suya & Tere Dayanıklı
+              </td>
+              <td class="desc-properties dp-left">Hayır</td>
+            </tr>
+            <tr>
+              <td class="desc-properties dp-left bold"></td>
+              <td class="desc-properties dp-left"></td>
+            </tr>
+            <tr>
+              <td class="desc-properties dp-left bold">Kullanım Tipi</td>
+              <td class="desc-properties dp-left">Kulakiçi</td>
+            </tr>
+          </table>
+          <table class="table-right">
+            <tr>
+              <td class="desc-properties bold">Bluetooth Versiyon</td>
+              <td class="desc-properties">5.0</td>
+            </tr>
+            <tr>
+              <td class="desc-properties dp-right bold">
+                Aktif Gürültü Önleme
+              </td>
+              <td class="desc-properties dp-right">Yok</td>
+            </tr>
+            <tr>
+              <td class="desc-properties dp-right bold">(ANC)</td>
+              <td class="desc-properties dp-right"></td>
+            </tr>
+            <tr>
+              <td class="desc-properties dp-right bold"></td>
+              <td class="desc-properties dp-right"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="right">
+        <div class="right-header">
+          <h3 class="header-h3">
+            TWS i12 Bluetooth 5.0 Kulaklık - Şarj Üniteli
+          </h3>
+          <p class="header-p">TWS</p>
+        </div>
+        <div class="right-top">
+          <div class="right-top-top">
+            <h1>115,00</h1>
+            <h3 class="right-top-top-h3">TL</h3>
+          </div>
+          <div class="right-top-mid-1">
+            <div class="right-top-mid-1-div-1">
+              <h3>3,5</h3>
+              <i class="fa-solid fa-star full-star"></i>
+              <i class="fa-solid fa-star full-star"></i>
+              <i class="fa-solid fa-star full-star"></i>
+              <i class="fa-regular fa-star-half-stroke full-star"></i>
+              <i class="fa-solid fa-star empty-star" style="color: gray"></i>
+            </div>
+
+            <p class="right-top-mid-1-right">7469 Değerlendirme</p>
+          </div>
+          <div class="right-top-mid-2">
+            19 TL x 6 aya varan<span class="right-top-mid-2-bold"
+              >Taksitle</span
+            >
+          </div>
+
+          <div class="right-top-mid-3">
+            <div class="right-top-mid-3-inside">
+              Satıcı:
+              <span class="right-top-mid-3-inside-toolong color-blue"
+                >SFİT TEKNOLOJİ ...
+              </span>
+              | Puan <span class="puan">9,4</span>
+              <span class="quMark">? </span>
+              <span class="kmp">| Kampanyaları Gör</span>
+              <span class="num">3</span>
+            </div>
+          </div>
+
+          <div class="right-top-bottom">
+            Seçili Telefon Alana TWS i12 Bluetooth 5.0 Kulaklık %10 İndirimli!
+          </div>
+        </div>
+        <hr />
+        <div class="right-middle">
+          <div class="right-middle-top">
+            <div class="right-middle-counter">
+              <div class="right-midd-counter-boxes">
+                <p class="minus">-</p>
+                <div class="right-midd-counter-box">
+                  <span class="one">1</span><br />Adet
+                </div>
+                <p class="plus">+</p>
+              </div>
+              <div class="right-mid-button-box">
+                <button class="right-mid-button">
+                  <i class="fa-solid fa-cart-shopping"></i>Sepete Ekle
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="right-middle-mid">
+            <div class="right-middel-mid-box">
+              <p>Eski ürününü yenisi ile değiştirmek ister misin?</p>
+              <div class="right-middle-mid-box-q">?</div>
+              <div class="right-middle-mid-box-faydalan">Faydalan</div>
+            </div>
+            <div class="right-middle-bottom">
+              <div class="icon">
+                <i class="fa-regular fa-heart"></i>
+                <p>Beğen</p>
+              </div>
+              <div class="icon">
+                <i class="fa-regular fa-bookmark"></i>
+                <p>Listeme Ekle</p>
+              </div>
+              <div class="icon">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                <p>Karşılaştır</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="right-bottom">
+          <div class="right-bottom-top">
+            <div class="right-bottom-top-box">
+              <div class="right-bottom-top-box-texts">
+                <h3>Teslimat Seçenekleri</h3>
+                <h5>Standart Teslimat</h5>
+                <p class="subtitle">
+                  En geç<span class="torima-bold">14 Ekim Cuma</span>günü
+                  kargoda
+                </p>
+              </div>
+              <div class="right-bottom-top-box-images">
+                <div class="konum-box">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p>Konum Seç</p>
+                </div>
+                <img src="img/hepsijet.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="right-bottom-middle">
+            <h3 class="asd">
+              Diğer Satıcılar - <span class="color"> Tümü (2)</span>
+            </h3>
+            <div class="right-bottom-mid-box-q">?</div>
+          </div>
+          <div class="right-bottom-bottom-box">
+            <div>
+              <p>
+                <span class="puan">9,7</span>
+                <span class="color-blue torima">Torima</span>
+              </p>
+              <p class="torima">
+                <span class="torima-bold">21 saat 42 dakika</span>içinde sipariş
+                verirsen yarın kargoda
+              </p>
+            </div>
+            <div class="right-bottom-bottom-box-mid-text torima-bold">
+              148,97 TL
+            </div>
+            <div class="right-bottom-bottom-box-bottom-button">
+              <div class="right-bottom-bottom-box-button">
+                <p>Sepete Ekle</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
