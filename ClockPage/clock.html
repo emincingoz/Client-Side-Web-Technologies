@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock Page</title>
+
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+      }
+
+      body {
+        background-image: url("P1-img/levander.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        margin: 7.5px;
+        border-radius: 5px;
+      }
+
+      .box-top {
+        width: 100%;
+        height: 60px;
+        background: rgba(78, 38, 127, 0.5);
+        padding: 0;
+        margin: 0;
+      }
+
+      .box-bottom {
+        width: 100%;
+        height: 40px;
+        background: rgba(0, 0, 200, 0.5);
+        padding: 0;
+        margin: 0;
+      }
+
+      .right-container {
+        display: flex;
+        align-self: flex-end;
+        margin: 7.5px;
+      }
+
+      .green-box {
+        width: 60px;
+        height: 40px;
+        background-color: rgba(0, 128, 0, 0.5);
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .font {
+        font-size: 2.2em;
+        font-weight: bold;
+        color: rgba(f, f, f, 0.5);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="left-container">
+        <div class="top-text"><h1>DIGITAL CLOCK</h1></div>
+        <div class="boxes">
+          <div class="box">
+            <div
+              id="hours"
+              class="box-top center font"
+              onload="showTime()"
+            ></div>
+            <div class="box-bottom center">HOURS</div>
+          </div>
+          <div class="box">
+            <div id="minutes" class="box-top center font"></div>
+            <div class="box-bottom center">MINUTES</div>
+          </div>
+          <div class="box">
+            <div id="seconds" class="box-top center font"></div>
+            <div class="box-bottom center">SECONDS</div>
+          </div>
+        </div>
+      </div>
+      <div class="right-container">
+        <div id="session" class="green-box center"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function showTime() {
+        var date = new Date();
+        var h = date.getHours(); // 0 - 23
+        var m = date.getMinutes(); // 0 - 59
+        var s = date.getSeconds(); // 0 - 59
+        var session = "AM";
+
+        if (h == 0) {
+          h = 12;
+        }
+
+        if (h > 12) {
+          h = h - 12;
+          session = "PM";
+        }
+
+        h = h < 10 ? "0" + h : h;
+        m = m < 10 ? "0" + m : m;
+        s = s < 10 ? "0" + s : s;
+
+        document.getElementById("hours").innerText = h;
+        document.getElementById("minutes").innerText = m;
+        document.getElementById("seconds").innerText = s;
+        document.getElementById("session").innerText = session;
+
+        setTimeout(showTime, 1000);
+      }
+
+      showTime();
+    </script>
+  </body>
+</html>
