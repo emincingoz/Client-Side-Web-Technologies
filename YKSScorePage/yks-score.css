@@ -1,0 +1,282 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /*text-align: center;*/
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    /*display: flex;*/
+    justify-content: center;
+    /*align-items: center;*/
+  }
+
+  .container-header {
+    margin: 1% 15%;
+  }
+
+  .left-container,
+  .right-container {
+    width: 35%;
+    background-color: #eeeeee;
+    margin: 0.5%;
+    border-radius: 3px;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .tick-mul-net {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0.05%;
+    margin-top: 15px;
+  }
+
+  .aytIcons {
+    margin-top: 15px;
+    margin-bottom: -25px;
+  }
+
+  .icon {
+    width: 70px;
+    margin-left: 0.17%;
+  }
+  
+  .tick {
+    margin-right: 1.7%;
+  }
+
+  .left-container-body,
+  .right-container-body-tyt,
+  .right-container-body-obp,
+  .right-container-body-result {
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  .ayt-field-section-title {
+    font-weight: bold;
+    color: #ababab;
+  }
+
+  .question-count-style {
+    font-size: 13px;
+    color: #366b9e;
+  }
+
+  .question-container {
+    width: 70px;
+    height: 35px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: rgb(0 0 0 / 16%) 0px 2px 0px;
+    border: 0.75px solid rgb(201, 201, 201);
+    border-radius: 7px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .section-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .section-box > div {
+    color: #333c50;
+    font-weight: bold;
+  }
+
+  .true-false-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 3%;
+  }
+
+  .question-container-icon-tick {
+    margin: -30% 77%;
+    color: green;
+  }
+
+  .question-container-icon-mul {
+    margin: -30% 77%;
+    color: red;
+  }
+
+  .question-container-with-icon {
+    margin: 0 5%;
+  }
+
+  .net-container {
+    border: none;
+    width: 90px;
+    margin: 0 20%;
+    box-shadow: none;
+  }
+
+  #fieldsection {
+    width: 100%;
+  }
+
+  .ayt-field-section {
+    margin: 5% 0;
+  }
+
+  .container{
+    display: inline-block;
+  }
+
+  .container-body{
+    display: flex;
+    justify-content: center;
+  }
+
+  .puan{
+    font-weight: normal;
+
+  }
+
+  .question-container-true-false-with-net {
+    display: flex;
+  }
+
+  .title{
+    width: 41.6667%;
+    margin: 1% 2%;
+  }
+
+  .result-titles, .result-text {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1%;
+    margin: 2% 0;
+  }
+
+  .result-title,
+  .result-text-with {
+    width: 30%;
+    color: midnightblue;
+    font-weight: bold;
+  }
+
+  .result-text-with {
+    width: 30%;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 3.5% 2%;
+  }
+
+  .button {
+    width: 40%;
+    height: 45px;
+    border-radius: 5px;
+    border: solid 2px red;
+  }
+
+  .button-left {
+    background-color: red;
+    border: none;
+    color: white;
+  }
+
+  .button-right {
+    background-color: white;
+    color: red;
+  }
+
+  .button-left:hover, .button-right:hover {
+    background-color: gray;
+  }
+
+  .gecen-sene-yerlestim-box {
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+  }
+
+  @media screen and (max-width: 991px) {
+    .top-text {
+      /*padding: 7px;*/
+      padding-bottom: 2%;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .left-container, .right-container {
+      width: 100%;
+    }
+
+    .left-container-body,
+    .right-container-body-tyt,
+    .right-container-body-obp,
+    .right-container-body-result {
+      margin: 1%;
+      padding: 2%;
+    }
+
+    .ayt-field-section-title {
+      font-size: smaller;
+      margin-bottom: 1%;
+    }
+
+    .section-box {
+      margin: 1%;
+    }
+
+    .section-box > div {
+      font-size: smaller;
+    }
+
+    .container-header > h1 {
+      font-size: 18px;
+    }
+
+    .container-body{
+      display: flex;
+      flex-wrap: wrap;
+      width: 70%;
+      margin: auto;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .top-text {
+      /*padding: 15px;*/
+      font-size: 25px;
+      padding-bottom: 2%;
+      text-align: center;
+    }
+
+    .left-container-body,
+    .right-container-body-tyt,
+    .right-container-body-obp,
+    .right-container-body-result {
+      margin: 2%;
+      padding: 2%;
+    }
+
+    .ayt-field-section-title {
+      font-size: medium;
+      margin-bottom: 3%;
+    }
+
+    .section-box {
+      margin: 1%;
+    }
+  }
