@@ -1,0 +1,46 @@
+.screen {
+    background-color: #1476b3;
+    border: 5px solid white;
+}
+
+header > div {
+    color: white;
+}
+
+.btn {
+    background-color: #555555;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #999;
+}
+
+.btn-equal {
+    background-color: #1476b3;
+}
+
+.btn-equal:hover {
+    background-color: #57a4d1;
+}
+
+.grid-container {
+    border: 2px solid white;
+    background-color: #333333;
+}
+
+.mode {
+    color: white;
+}
+
+#mode-btn:hover {
+    color: #382ec2;
+}
+
+.header {
+    color: white;
+}
+
+#calculator-input {
+    color: white;
+}
