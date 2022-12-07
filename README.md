@@ -30,3 +30,20 @@
 ### Clock Page
 
 ![clock](https://github.com/emincingoz/Client-Side-Web-Technologies/blob/main/images/clockPage.png?raw=true)
+
+### YKS Score Calculator
+
+|![yks score](https://github.com/emincingoz/Client-Side-Web-Technologies/blob/main/images/yks1.png?raw=true)|![yks score](https://github.com/emincingoz/Client-Side-Web-Technologies/blob/main/images/yks2.png?raw=true)|
+|---|---|
+
+## Hw-4
+
+### Tab Changer
+
+|![tab-changer](https://github.com/emincingoz/Client-Side-Web-Technologies/blob/main/images/tabs1.png?raw=true)|![tab-changer](https://github.com/emincingoz/Client-Side-Web-Technologies/blob/main/images/tabs2.png?raw=true)|
+|---|---|
+
+### Calculator
+
+|![calc1](https://github.com/emincingoz/Client-Side-Web-Technologies/blob/main/images/calculator-light.png?raw=true)|![calc2](https://github.com/emincingoz/Client-Side-Web-Technologies/blob/main/images/calculator-dark.png?raw=true)|
+|---|---|
