@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Changer</title>
+
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        /*text-align: center;*/
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 500px;
+        background-color: #ffb6c1;
+      }
+
+      .tabs {
+        display: flex;
+        /*justify-content: space-evenly;*/
+        align-items: center;
+        text-align: center;
+      }
+
+      .tab {
+        width: 25%;
+        height: 50px;
+        background-color: #dddddd;
+        border-right: 3px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+      }
+
+      .last {
+        border-right: none;
+      }
+
+      .tab:hover {
+        background-color: #dddb;
+      }
+
+      .tab-body {
+        padding: 3%;
+        font-size: 18px;
+      }
+
+      .active-tab {
+        background-color: #ffb6c1;
+        border-right: none;
+        /* Disable all pointer events */
+        pointer-events: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <div id="default" class="tab" onclick="handleTabChange('tab1', this)">
+          Tab1
+        </div>
+        <div class="tab" onclick="handleTabChange('tab2', this)">Tab2</div>
+        <div class="tab" onclick="handleTabChange('tab3', this)">Tab3</div>
+        <div class="tab last" onclick="handleTabChange('tab4', this)">Tab4</div>
+      </div>
+      <div class="tab-body">
+        <div id="tab1" class="tab-inside"></div>
+        <div id="tab2" class="tab-inside"></div>
+        <div id="tab3" class="tab-inside"></div>
+        <div id="tab4" class="tab-inside"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      tabs = { tab1: 1, tab2: 2, tab3: 3, tab4: 4 };
+      function renderTab(id, value, count) {
+        let template = "<p>";
+        for (let index = 0; index < count; index++) {
+          template += `${value}${value}${value} `;
+        }
+        template += "</p>";
+
+        document.querySelector("#" + id).innerHTML = template;
+      }
+
+      function handleTabChange(id, tag) {
+        let tabInsides = document.getElementsByClassName("tab-inside");
+        let tab = document.getElementsByClassName("tab");
+
+        for (let i = 0; i < tabInsides.length; i++) {
+          tabInsides[i].style.display = "none";
+          tab[i].className = tab[i].className.replace(" active-tab", "");
+        }
+
+        document.getElementById(id).style.display = "block";
+        tag.className += " active-tab";
+
+        let count = id === "tab1" ? 140 : 143;
+
+        renderTab(id, tabs[id], count);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initial rendering of the items
+        document.getElementById("default").className += " active-tab";
+        renderTab("tab1", tabs["tab1"], 140);
+      });
+    </script>
+  </body>
+</html>
