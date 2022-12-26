@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Management System</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="my-container">
+    <div class="name-space py-2 px-5 fw-bold">Merhaba, John Doe</div>
+    <div class="header">
+      <div class="header-left-section">
+        <div class="header-left-section-icon">
+          <img src="esogu-logo.png" alt="" class="icon pt-1" />
+        </div>
+        <div class="head header-left-section-head fw-bold pt-3">
+          Eskişehir Osmangazi Üniversitesi
+          <span class="header-span">Öğrenci Yönetim Sistemi</span>
+        </div>
+      </div>
+      <div class="header-right-section px-3">
+        <button class="header-button">Çıkış Yap</button>
+      </div>
+    </div>
+    <div class="body">
+      <div class="body-header" style="display: flex; justify-content: space-between">
+        <div class="left-header px-5 pt-4 pb-2 fw-bold">Öğrenci Listesi</div>
+        <div class="right-header px-5 pb-2">
+          <div class="student-add-button" data-toggle="modal" data-target="#ekleModal" onclick="getEkleModal(this)">
+            <i class="bi bi-person-plus"style="
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                padding-top: 0.5rem;
+              "></i>
+          </div>
+        </div>
+      </div>
+      <div id="table"></div>
+    </div>
+  </div>
+  <div id="detay-modal"></div>
+  <div id="sil-modal"></div>
+  <div id="update-modal"></div>
+  <div id="ekle-modal"></div>
+
+  <script src="data.js" defer></script>
+  <script src="index.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
