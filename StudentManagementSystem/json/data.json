@@ -1,0 +1,328 @@
+{
+  "students": [
+    {
+      "id": 8,
+      "fname": "Isim8",
+      "lname": "Soyisim8",
+      "num": "152120171108",
+      "dept": 4,
+      "pob": "Antalya",
+      "dob": "1995-12-25"
+    },
+    {
+      "id": 9,
+      "fname": "Isim9",
+      "lname": "Soyisim9",
+      "num": "152120171109",
+      "dept": 1,
+      "pob": "Tokat",
+      "dob": "2001-07-16"
+    },
+    {
+      "id": 10,
+      "fname": "Isim10",
+      "lname": "Soyisim10",
+      "num": "152120171110",
+      "dept": 3,
+      "pob": "Denizli",
+      "dob": "1999-05-19"
+    },
+    {
+      "id": 11,
+      "fname": "Isim11",
+      "lname": "Soyisim11",
+      "num": "152120171111",
+      "dept": 2,
+      "pob": "Yozgat",
+      "dob": "1999-05-05"
+    },
+    {
+      "id": 12,
+      "fname": "Isim12",
+      "lname": "Soyisim12",
+      "num": "152120171112",
+      "dept": 1,
+      "pob": "Sivas",
+      "dob": "1998-04-04"
+    },
+    {
+      "id": 13,
+      "fname": "Isim13",
+      "lname": "Soyisim13",
+      "num": "152120171113",
+      "dept": 2,
+      "pob": "Bursa",
+      "dob": "1998-03-19"
+    },
+    {
+      "id": 14,
+      "fname": "Isim14",
+      "lname": "Soyisim14",
+      "num": "152120171114",
+      "dept": 4,
+      "pob": "Çankırı",
+      "dob": "1999-02-28"
+    },
+    {
+      "id": 15,
+      "fname": "Isim15",
+      "lname": "Soyisim15",
+      "num": "152120171115",
+      "dept": 3,
+      "pob": "Aydın",
+      "dob": "1999-03-12"
+    },
+    {
+      "id": 16,
+      "fname": "Isim16",
+      "lname": "Soyisim16",
+      "num": "152120171116",
+      "dept": 4,
+      "pob": "Bilecik",
+      "dob": "2000-03-07"
+    },
+    {
+      "id": 17,
+      "fname": "Isim17",
+      "lname": "Soyisim17",
+      "num": "152120171117",
+      "dept": 1,
+      "pob": "Manisa",
+      "dob": "2000-03-31"
+    },
+    {
+      "id": 18,
+      "fname": "Isim18",
+      "lname": "Soyisim18",
+      "num": "152120171118",
+      "dept": 1,
+      "pob": "Bolu",
+      "dob": "2000-06-25"
+    },
+    {
+      "id": 19,
+      "fname": "Isim19",
+      "lname": "Soyisim19",
+      "num": "152120171119",
+      "dept": 2,
+      "pob": "Hatay",
+      "dob": "1997-03-04"
+    },
+    {
+      "id": 20,
+      "fname": "Isim20",
+      "lname": "Soyisim20",
+      "num": "152120171120",
+      "dept": 3,
+      "pob": "Afyon",
+      "dob": "2000-07-18"
+    },
+    {
+      "id": 21,
+      "fname": "Isim21",
+      "lname": "Soyisim21",
+      "num": "152120171121",
+      "dept": 1,
+      "pob": "Kars",
+      "dob": "2001-08-08"
+    },
+    {
+      "id": 22,
+      "fname": "Isim22",
+      "lname": "Soyisim22",
+      "num": "152120171122",
+      "dept": 4,
+      "pob": "Mardin",
+      "dob": "1997-01-31"
+    },
+    {
+      "id": 23,
+      "fname": "Isim23",
+      "lname": "Soyisim23",
+      "num": "152120171123",
+      "dept": 2,
+      "pob": "Van",
+      "dob": "2002-05-11"
+    },
+    {
+      "id": 24,
+      "fname": "Isim24",
+      "lname": "Soyisim24",
+      "num": "152120171124",
+      "dept": 1,
+      "pob": "Aydın",
+      "dob": "2001-09-11"
+    },
+    {
+      "id": 25
+    },
+    {
+      "id": 26
+    },
+    {
+      "id": 27
+    },
+    {
+      "id": 28
+    },
+    {
+      "id": 29
+    },
+    {
+      "id": 30
+    },
+    {
+      "fname": "dsfdgfd",
+      "lname": "fhfghg",
+      "num": "234343242342",
+      "dept": 4,
+      "pob": "454654",
+      "dob": "1999-03-23",
+      "id": 31
+    },
+    {
+      "fname": "sdgfdg",
+      "lname": "23ewer",
+      "num": "343546456546",
+      "dept": 2,
+      "pob": "dgdfgf",
+      "dob": "2004-12-31",
+      "id": 32
+    },
+    {
+      "fname": "emin",
+      "lname": "asda",
+      "num": "123131231231",
+      "dept": 1,
+      "pob": "esk",
+      "dob": "2000-05-13",
+      "id": 33
+    },
+    {
+      "fname": "qwewq",
+      "lname": "qwewq",
+      "num": "152120181036",
+      "dept": 1,
+      "pob": "es",
+      "dob": "2000-02-13",
+      "id": 34
+    },
+    {
+      "fname": "qwewq",
+      "lname": "qwewq",
+      "num": "152120181036",
+      "dept": 1,
+      "pob": "esss",
+      "dob": "2000-02-13",
+      "id": 35
+    },
+    {
+      "fname": "sgfg",
+      "lname": "fdhfgh",
+      "num": "152120181045",
+      "dept": 2,
+      "pob": "rytry",
+      "dob": "2000-02-15",
+      "id": 36
+    },
+    {
+      "fname": "sgfg",
+      "lname": "fdhfgh",
+      "num": "152120181045",
+      "dept": 2,
+      "pob": "rytry",
+      "dob": "2000-02-15",
+      "id": 37
+    },
+    {
+      "fname": "gdfg",
+      "lname": "ffghgf",
+      "num": "152120181036",
+      "dept": 1,
+      "pob": "dsff",
+      "dob": "2000-05-13",
+      "id": 38
+    },
+    {
+      "fname": "fhgfhgf",
+      "lname": "fghgfh",
+      "num": "152120181035",
+      "dept": 1,
+      "pob": "asdds",
+      "dob": "2000-05-13",
+      "id": 39
+    },
+    {
+      "fname": "sdfdsf",
+      "lname": "gfdgfd",
+      "num": "152120181038",
+      "dept": 1,
+      "pob": "erer",
+      "dob": "2000-05-13",
+      "id": 41
+    },
+    {
+      "fname": "sdfdsf",
+      "lname": "gfdgfd",
+      "num": "152120181111",
+      "dept": 1,
+      "pob": "erer",
+      "dob": "2000-05-13",
+      "id": 42
+    },
+    {
+      "fname": "fghgfhgf",
+      "lname": "gfhgh",
+      "num": "152120181043",
+      "dept": 1,
+      "pob": "dgfdgfd",
+      "dob": "2000-05-13",
+      "id": 43
+    },
+    {
+      "fname": "fghgfhgf",
+      "lname": "gfhgh",
+      "num": "152120181049",
+      "dept": 1,
+      "pob": "dgfdgfd",
+      "dob": "2000-05-13",
+      "id": 44
+    },
+    {
+      "fname": "dgfgf",
+      "lname": "fgfgh",
+      "num": "152120181112",
+      "dept": 1,
+      "pob": "sddf",
+      "dob": "2000-05-13",
+      "id": 45
+    },
+    {
+      "fname": "fhgf",
+      "lname": "fghfg",
+      "num": "115212018103",
+      "dept": 1,
+      "pob": "dfds",
+      "dob": "2000-05-13",
+      "id": 46
+    },
+    {
+      "fname": "dfgfdg",
+      "lname": "fhfgh",
+      "num": "111111111111",
+      "dept": 1,
+      "pob": "dfgdf",
+      "dob": "2000-05-13",
+      "id": 47
+    },
+    {
+      "fname": "cvbvnb",
+      "lname": "vcbvcb",
+      "num": "999999454545",
+      "dept": 3,
+      "pob": "vvbc",
+      "dob": "2004-12-08",
+      "id": 49
+    }
+  ]
+}
