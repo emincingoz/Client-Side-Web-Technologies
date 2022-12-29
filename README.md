@@ -61,3 +61,13 @@
 
 | ![sms7](https://github.com/emincingoz/Client-Side-Web-Technologies/blob/main/images/sms7.png?raw=true) | ![sms8](https://github.com/emincingoz/Client-Side-Web-Technologies/blob/main/images/sms8.png?raw=true) |
 |-----|-----|
+
+## Hw-6
+
+### Student Management System with React
+
+| ![hw6-1](https://github.com/emincingoz/Client-Side-Web-Technologies/blob/main/images/hw6-1.png?raw=true) | ![hw6-2](https://github.com/emincingoz/Client-Side-Web-Technologies/blob/main/images/hw6-2.png?raw=true) | ![hw6-3](https://github.com/emincingoz/Client-Side-Web-Technologies/blob/main/images/hw6-3.png?raw=true) | 
+|-----|-----|-----|
+
+| ![hw6-4](https://github.com/emincingoz/Client-Side-Web-Technologies/blob/main/images/hw6-4.png?raw=true) | ![hw6-5](https://github.com/emincingoz/Client-Side-Web-Technologies/blob/main/images/hw6-5.png?raw=true) |
+|-----|-----|
