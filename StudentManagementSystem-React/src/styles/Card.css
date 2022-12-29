@@ -1,0 +1,47 @@
+.my-card {
+    border: 2px solid rgba(209,218,219,255);
+    background-color: #edffff;
+    height: 130px;
+    padding: 0.7% 1%;
+    border-radius: 5px;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    padding-top: 3%;
+    gap: 10px;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+/* just 1 Card per row */
+@media screen and (max-width: 768px) {
+    .my-card {
+        width: 400px;
+    }
+}
+
+/* just 2 Card per row */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .my-card {
+        width: 48.9%;
+    }
+}
+
+/* just 3 Card per row */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .my-card {
+        width: 32%;
+    }
+}
+
+/* just 4 Card per row */
+@media screen and (min-width: 1200px) {
+    .my-card {
+        width: 24%;
+    }
+}
+
